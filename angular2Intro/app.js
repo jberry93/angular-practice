@@ -6,3 +6,7 @@ var AppComponent = ng.Component({
 }).Class({
   constructor: function() { }
 });
+
+document.addEventListener("DOMContentLoaded", function() {
+  ng.bootstrap(AppComponent);
+});
