@@ -14,17 +14,38 @@
     <div ng-controller="myController" class="angularForm">
       <h1 class="ui center aligned header">Angular Form</h1>
       <form name="formName" ng-submit="submitFormFunction()" novalidate class="ui form">
-        <h4>Username</h4>
-        <input ng-model="user.username" ng-minlength="2" ng-maxlength="8" type="text" placeholder="Username" required>
-        <p ng-show="formName.username.$invalid && !formName.name.$pristine">A username is required</p>
-        <p ng-show="formName.username.$error.minlength">The username needs to be at least 2 characters</p>
-        <p ng-show="formName.username.$error.maxlength">The username can only have 8 characters</p>
-        <h4>Password</h4>
-        <input ng-model="user.password" type="password" placeholder="Password" required>
-        <h4>Email</h4>
-        <input ng-model="user.email" type="email" placeholder="Email" required>
-        <br><br>
-        <input class="ui button" type="submit" placeholder="Submit">
+        <div class="field">
+          <h4>Username</h4>
+          <input
+            ng-model="user.username"
+            ng-minlength="2"
+            ng-maxlength="8"
+            ng-required="true"
+            type="text"
+            placeholder="Username"
+            required>
+          <p ng-show="formName.username.$invalid && !formName.name.$pristine">A username is required</p>
+          <p ng-show="formName.username.$error.minlength">The username needs to be at least 2 characters</p>
+          <p ng-show="formName.username.$error.maxlength">The username can only have 8 characters</p>
+        </div>
+        <div class="field">
+          <h4>Password</h4>
+          <input
+            ng-model="user.password"
+            type="password"
+            placeholder="Password"
+            required>
+        </div>
+        <div class="field">
+          <h4>Email</h4>
+          <input
+            ng-model="user.email"
+            type="email"
+            placeholder="Email"
+            required>
+        </div>
+        <br>
+        <button ng-disabled="formName.$invalid" class="ui button" type="submit">Submit</button>
       </form>
     </div>
   </body>
