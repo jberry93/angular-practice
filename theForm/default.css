@@ -1,0 +1,19 @@
+body {
+  background: whitesmoke;
+}
+div.angularForm {
+  width: 460px;
+  top: 115px;
+  left: 50%;
+  transform: translate(-50%);
+  position: absolute;
+  background: white;
+  padding: 50px;
+}
+h1.ui.header {
+  color: #E52A3A;
+}
+input.ui.button {
+  background: #E52A3A;
+  color: white;
+}
