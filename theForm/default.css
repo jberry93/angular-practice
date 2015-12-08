@@ -13,7 +13,7 @@ div.angularForm {
 h1.ui.header {
   color: #E52A3A;
 }
-input.ui.button {
+button.ui.button {
   background: #E52A3A;
   color: white;
 }
