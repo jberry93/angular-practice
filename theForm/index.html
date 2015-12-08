@@ -21,10 +21,11 @@
             ng-minlength="2"
             ng-maxlength="8"
             ng-required="true"
+            name="username"
             type="text"
             placeholder="Username"
             required>
-          <p ng-show="formName.username.$invalid && !formName.name.$pristine">A username is required</p>
+          <p ng-show="formName.username.$invalid && !formName.username.$pristine">A username is required</p>
           <p ng-show="formName.username.$error.minlength">The username needs to be at least 2 characters</p>
           <p ng-show="formName.username.$error.maxlength">The username can only have 8 characters</p>
         </div>
@@ -32,18 +33,22 @@
           <h4>Password</h4>
           <input
             ng-model="user.password"
+            name="password"
             type="password"
             placeholder="Password"
             required>
         </div>
+        <p ng-show="formName.password.$invalid && !formName.password.$pristine">A password is required</p>
         <div class="field">
           <h4>Email</h4>
           <input
             ng-model="user.email"
+            name="email"
             type="email"
             placeholder="Email"
             required>
         </div>
+        <p ng-show="formName.email.$invalid && !formName.email.$pristine">An email is required</p>
         <br>
         <button ng-disabled="formName.$invalid" class="ui button" type="submit">Submit</button>
       </form>
