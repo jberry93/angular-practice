@@ -17,3 +17,6 @@ button.ui.button {
   background: #E52A3A;
   color: white;
 }
+.ng-invalid {
+  color: #B15E5D;
+}
