@@ -27,7 +27,9 @@ var angularFactory = angularModule.factory("messages", function() {
 });
 
 // create a controller to render messages in the view:
-var listController = angularApp.controller("listController", function() {...});
+var listController = angularApp.controller("listController", function(messages) {
+  this.messages = messages.list;
+});
 
 // create a controller to post messages:
 var postController = angularApp.controller("postController", function() {...});
