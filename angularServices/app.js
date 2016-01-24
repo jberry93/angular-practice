@@ -1,13 +1,9 @@
 "use strict";
 
-var angular = require("angular");
-
-var angularApp = angular.module("app", []);
-
-var angularModule = angularApp.module("app");
+var angularModule = angular.module("app", []);
 
 // create a service to store & create messages:
-var angularFactory = angularModule.factory("messages", function() {
+angularModule.factory("messages", function() {
   // store service dependencies
   var messages = {};
   
@@ -27,9 +23,15 @@ var angularFactory = angularModule.factory("messages", function() {
 });
 
 // create a controller to render messages in the view:
-var listController = angularApp.controller("listController", function(messages) {
+angularModule.controller("ListController", function(messages) {
   this.messages = messages.list;
 });
 
 // create a controller to post messages:
-var postController = angularApp.controller("postController", function() {...});
+angularModule.controller("PostController", function(messages) {
+  this.newMessage = "Hello World!!";
+  this.addMessage = function(message) {
+    messages.add(message);
+    this.newMessage = "";
+  };
+});
