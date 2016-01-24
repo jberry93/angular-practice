@@ -53,8 +53,10 @@ angularModule.controller("PostController", function() {/* Post Controller Logic 
 ```
 
 A couple things are happening here:
-- Line 1 = We are invoking a method `module()` from object `angular` which takes in 2 arguments; first a string `"app"` containing the name of the module and second, an array containing the dependencies of `"app"`. This method returns a new module containing all the methods and properties of the Angular module. This new module is set equal to a new variable called `angularModule`. ([cite][4])
+- **Line 1** = We are invoking a method `module()` from object `angular` which takes in 2 arguments; first a string `"app"` containing the name of the module and second, an array containing the dependencies of `"app"`. This method returns a new module object containing all the methods and properties of the Angular module. This new module is set equal to a new variable called `angularModule`. ([cite][4])
   - Since `"app"` does not have any dependencies, we simply give an empty array to instantiate the module
+- **Line 2** = The module object contains a method called `factory()` which has 2 arguments; the first is the name of service `messages`, the second is a function containing the functionality of the service. This method will return an object containing an instance of the service. ([cite][2])
+- **Line 3 & 4** = The module object contains a method called `controller()` which has 2 arguments; the first is the string name of the controller, the second is a constructor function to make the controller. This will of course return a new controller. ([cite][5])
 
 
 [1]: https://thinkster.io/a-better-way-to-learn-angularjs/services "Thinkster Angular Article"
@@ -64,3 +66,5 @@ A couple things are happening here:
 [3]: https://github.com/jberry93/angular-practice/blob/master/angularServices/app.js "app.js Content"
 
 [4]: https://docs.angularjs.org/api/ng/function/angular.module "Angular Documentation: Modules"
+
+[5]: https://docs.angularjs.org/api/ng/type/angular.Module "Angular Documentation: controller()"
