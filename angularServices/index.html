@@ -3,12 +3,18 @@
   <head>
     <title>Angular Services</title>
     <meta charset="utf-8">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.0-beta.5/angular.min.js"></script>
+    <!--<script src="node_modules/angular/angular.min.js"></script>-->
+    <script src="app.js"></script>
   </head>
   <body>
     <div ng-app="app">
       <h1>Le Service~</h1>
+      <div ng-controller="ListController as list">
+        <p ng-repeat="message in list.messages">{{ message.id }}: {{ message.text }}</p>
+      </div>
     </div>
-    <script src="node_modules/angular/angular.min.js"></script>
-    <script src="app.js"></script>
+    <!--<script src="node_modules/angular/angular.min.js"></script>-->
+    <!--<script src="app.js"></script>-->
   </body>
 </html>
