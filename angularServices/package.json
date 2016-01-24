@@ -11,10 +11,6 @@
   "license": "ISC",
   "dependencies": {
     "angular": "^1.4.9",
-    "browserify": "^13.0.0",
-    "gulp": "^3.9.0",
-    "live-server": "^0.9.1",
-    "vinyl-transform": "^1.0.0",
-    "watchify": "^3.7.0"
+    "live-server": "^0.9.1"
   }
 }
