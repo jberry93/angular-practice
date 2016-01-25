@@ -1,1 +1,12 @@
 h1 { text-align: center; }
+th:first-child, td:first-child {
+  width: 50%;
+}
+@media (max-width: 40.0rem) {
+  h1 {
+    font-size: 32px;
+  }
+  td {
+    font-size: 10px;
+  }
+}
