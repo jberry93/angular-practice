@@ -6,7 +6,7 @@ th:first-child, td:first-child {
   h1 {
     font-size: 32px;
   }
-  td {
+  td, a {
     font-size: 10px;
   }
 }
