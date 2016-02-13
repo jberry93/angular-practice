@@ -2,17 +2,39 @@
 <html lang="en-US">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
     <title>AngularJS</title>
     <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" integrity="sha256-7s5uDGW3AHqw6xtJmNNtr+OBRJUlgkNJEo78P4b0yRw= sha512-nNo+yCHEyn0smMxSswnf/OnX6/KwJuZTlNZBjauKhTK0c+zT+q5JOCx0UFhXQ6rJR9jg6Es8gPuD2uZcYDLqSw==" crossorigin="anonymous">
+    <style>
+      h1 {
+        text-align: center;
+      }
+      div {
+        padding: 10px;
+      }
+      div.container-fluid {
+        text-align: center;
+      }
+    </style>
   </head>
   <body>
-    <div ng-app="">
-      <p>Name: <input type="text" ng-model="name"></p>
-      <p>Email: <input type="email" ng-model="email"></p>
-      <p>Lucky Number: <input type="number" ng-model="lucky"></p>
-      <b>Your name is <i>{{name}}</i></b><br>
-      <b>Your email is <i>{{email}}</i></b><br>
-      <b>Your lucky number is <i>{{lucky}}</i></b>
+    <h1>Super Simple Angular App</h1>
+    <div ng-app>
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-md-4 col-xs-12"><p>Name:</p><input type="text" ng-model="name"></div>
+          <div class="col-md-4 col-xs-12"><p>Email:</p><input type="email" ng-model="email"></div>
+          <div class="col-md-4 col-xs-12"><p>Lucky Number:</p><input type="number" ng-model="lucky"></div>
+        </div>
+        <div class="row">
+          <div class="col-md-4 col-xs-12"><b>Your name is <br><i>{{name}}</i></b></div>
+          <div class="col-md-4 col-xs-12"><b>Your email is <br><i>{{email}}</i></b></div>
+          <div class="col-md-4 col-xs-12"><b>Your lucky number is <br><i>{{lucky}}</i></b></div>
+        </div>
+      </div>
+      <hr>
+      <a href="pages/page1.html">Next</a>
     </div>
   </body>
 </html>
